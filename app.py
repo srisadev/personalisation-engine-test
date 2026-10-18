@@ -53,7 +53,7 @@ def set_llm_delay(seconds: float):
 
 @app.get("/loaderio-{token}.txt", response_class=PlainTextResponse)
 def loaderio_verify(token: str):                        # Loader.io domain verification
-    return token
+       return f"loaderio-{token}"
 
 @app.get("/")
 def health():
